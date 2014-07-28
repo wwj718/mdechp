@@ -1,9 +1,11 @@
 #/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from django.conf.urls import urls, patterns
+from django.conf.urls import url, patterns
 from django.views.generic import TemplateView
 
-from .view import index
+from .views import index
 
-home_patterns = patterns()
+urlpatterns = patterns('home.views',
+        url(r'^$', 'index', {'template': 'home.html'})
+        )
