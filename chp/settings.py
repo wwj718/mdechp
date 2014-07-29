@@ -137,6 +137,9 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "django.contrib.humanize",
 
+    # external
+    "debug_toolbar",
+
     # theme
     "pinax_theme_bootstrap",
     "bootstrapform",
@@ -182,9 +185,9 @@ EMAIL_BACKEND = "mailer.backend.DbBackend"
 #    "INTERCEPT_REDIRECTS": False,
 #}
 #
-#MARKITUP_FILTER = ("markdown.markdown", {"safe_mode": True})
-#MARKITUP_SET = "markitup/sets/markdown"
-#MARKITUP_SKIN = "markitup/skins/simple"
+MARKITUP_FILTER = ("markdown.markdown", {"safe_mode": True})
+MARKITUP_SET = "markitup/sets/markdown"
+MARKITUP_SKIN = "markitup/skins/simple"
 #
 #CONFERENCE_ID = 1
 #

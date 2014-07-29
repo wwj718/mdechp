@@ -61,7 +61,7 @@
             {% block body_base %}
                 <section id="content_body">
                     <div class="container">
-                        {% include "_messages.html" %}
+                        {# include "_messages.html" #}
                         {% block body %}
                         {% endblock %}
                     </div>
@@ -101,7 +101,7 @@
                                         </ul>
                                     {% endcomment %}
                                 {% endblock %}
-                                {% block account_bar %}{% include "_account_bar.html" %}{% endblock %}
+                                {% block account_bar %}{#  include "_account_bar.html" #}{% endblock %}
                             </div>
                                 {% block nav %}
                                     {% comment %}
@@ -122,7 +122,7 @@
             {% block body_base %}
                 <section id="content_body">
                     <div class="container">
-                        {% include "" %}
+                        {# include "" #}
                         {% block body %}
                         {% endblock %}
                     </div>

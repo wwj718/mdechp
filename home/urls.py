@@ -4,8 +4,8 @@
 from django.conf.urls import url, patterns
 from django.views.generic import TemplateView
 
-from .views import index
+from home import views
 
 urlpatterns = patterns('home.views',
-        url(r'^$', 'index', {'template': 'home.html'})
+        url(r'^$', views.index, name='home_index')
         )
