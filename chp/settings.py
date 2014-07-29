@@ -123,7 +123,7 @@ TEMPLATE_CONTEXT_PROCESSORS = [
     "django.contrib.messages.context_processors.messages",
     "account.context_processors.account",
     "pinax_theme_bootstrap.context_processors.theme",
-    "symposion.reviews.context_processors.reviews",
+#    "symposion.reviews.context_processors.reviews",
 ]
 
 INSTALLED_APPS = [
