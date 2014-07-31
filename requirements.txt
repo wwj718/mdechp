@@ -1,0 +1,5 @@
+django==1.6.5
+pinax-theme-bootstrap
+django-bootstrap-form
+django-debug-toolbar
+reversion
