@@ -1,5 +1,32 @@
-django==1.6.5
-pinax-theme-bootstrap
-django-bootstrap-form
-django-debug-toolbar
-reversion
+# base.txt is a pip requirements file which describes the necessary
+# distributions required to run this project. If you need something that is
+# project specific not listed here use project.txt. You can, of course, update
+# versions of distributions here if needed.
+#
+#--extra-index-url=http://dist.pinaxproject.com/dev/
+#--extra-index-url=http://dist.pinaxproject.com/alpha/
+#--extra-index-url=http://dist.pinaxproject.com/fresh-start/
+
+Django==1.6.5
+-e git+https://github.com/bill4mobile/django-user-accounts.git#egg=django-user-accounts
+-e git+https://github.com/bill4mobile/symposion.git#egg=symposion
+pinax-theme-bootstrap==5.4.0
+django-bootstrap-form==3.1
+metron==1.3.1
+django-debug-toolbar==1.2.1
+-e git+https://github.com/bill4mobile/django-mailer.git#egg=django-mailer
+django-timezones==0.2
+pytz==2014.4
+django-model-utils==2.0.3
+
+django-taggit==0.12
+django-reversion==1.8.1
+django-markitup
+markdown==2.4.1
+django-sitetree==1.0.0
+--allow-external PIL 
+easy-thumbnails==2.0.1
+
+gunicorn==19.0.0
+gondor==1.2.5
+psycopg2==2.5.3
