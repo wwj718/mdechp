@@ -6,6 +6,6 @@ from django.views.generic import TemplateView
 
 from home import views
 
-urlpatterns = patterns('home.views',
+urlpatterns = patterns('home',
         url(r'^$', views.index, name='home_index'),
         )

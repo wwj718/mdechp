@@ -12,7 +12,7 @@ urlpatterns = patterns('',
     # url(r'^$', 'chp.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
 
-    url('^$', RedirectView.as_view(pattern_name='home')),
+    url('^$', RedirectView.as_view(pattern_name='home_index')),
     url(r'^home/', include('home.urls')),
     url(r'^admin/', include(admin.site.urls)),
 )
