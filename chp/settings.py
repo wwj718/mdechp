@@ -109,7 +109,7 @@ ROOT_URLCONF = "chp.urls"
 WSGI_APPLICATION = 'chp.wsgi.application'
 
 TEMPLATE_DIRS = [
-    os.path.join(PROJECT_ROOT, "templates"),
+    os.path.join(PROJECT_ROOT, "chp/templates"),
 ]
 
 TEMPLATE_CONTEXT_PROCESSORS = [
