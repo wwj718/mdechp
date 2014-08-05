@@ -3,8 +3,8 @@
 
 from __future__ import unicode_literals
 
-form django.db import models
-form django.db import transcation
+from django.db import models
+from django.db import transaction
 
 class BaseWebConfig(models.Model):
     """
