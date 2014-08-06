@@ -139,6 +139,7 @@ INSTALLED_APPS = [
 
     # external
     "debug_toolbar",
+    "crispy_forms",
 
     # theme
     "pinax_theme_bootstrap",
