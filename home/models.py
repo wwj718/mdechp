@@ -11,7 +11,7 @@ class BaseWebConfig(models.Model):
     配置站点基本信息
     """
 
-    siteid = models.IntegerField()
+    siteid = models.IntegerField(verbose_name='新站点ID')
     weburl = models.CharField(max_length=256, verbose_name=u'新站点网址')
     confname = models.CharField(max_length=256, verbose_name=u'会议名称')
     conftime = models.DateField(blank=True, null=True, verbose_name=u'会议时间')
