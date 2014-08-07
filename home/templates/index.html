@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+
+{% block head_title_base %} home {% endblock %}
+{% block extra_style_base %}
+    <link rel="stylesheet" href="{% static 'home/css/home.css' %}">
+{% endblock %}
+{% block topbar_base %}
+<b>Hello world block</b>
+{% endblock %}
+{% block body_base %}
+    {% crispy form %}
+{% endblock %}
