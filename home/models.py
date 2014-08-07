@@ -12,7 +12,7 @@ class BaseWebConfig(models.Model):
     """
 
     siteid = models.IntegerField(verbose_name='新站点ID')
-    weburl = models.CharField(max_length=256, verbose_name=u'新站点网址')
+    weburl = models.URLField(max_length=256, verbose_name=u'新站点网址')
     confname = models.CharField(max_length=256, verbose_name=u'会议名称')
     conftime = models.DateField(blank=True, null=True, verbose_name=u'会议时间')
     credit_property = models.CharField(max_length=32, verbose_name=u'学分属性')

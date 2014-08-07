@@ -21,7 +21,7 @@ class ConfigForm(forms.ModelForm):
     class Meta:
         model = BaseWebConfig
 
-    weburl = forms.CharField(initial='http://')
+    #weburl = forms.CharField(initial='http://')
     conf_type = forms.ChoiceField(widget=forms.Select(), choices=v_conftype)
 
     helper = FormHelper()
