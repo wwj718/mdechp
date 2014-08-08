@@ -147,6 +147,11 @@ INSTALLED_APPS = [
 
     # project
     "home",
+
+    #added by wwj
+    "account", #for django-user-accounts
+    'wwj',
+    'mptt',
 ]
 
 #FIXTURE_DIRS = [
