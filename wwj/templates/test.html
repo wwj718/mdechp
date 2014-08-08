@@ -1,0 +1,13 @@
+{% load mptt_tags %}
+{{ test }}
+<ul>
+    <li>
+        {% drilldown_tree_for_node meetInfo as mynodes %}
+        {% for node,structure in mynodes|tree_info %}
+        {{ node.title }}
+            <ul class="children">
+                {{ children }}
+            </ul>
+        {% endfor %}
+    </li>
+</ul>

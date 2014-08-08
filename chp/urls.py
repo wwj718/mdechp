@@ -14,6 +14,7 @@ urlpatterns = patterns('',
 
     url('^$', RedirectView.as_view(url='/home/')),
     url(r'^home/', include('home.urls')),
+    url(r'^wwj/', include("wwj.urls")),
     url(r'^admin/', include(admin.site.urls)),
 )
 
