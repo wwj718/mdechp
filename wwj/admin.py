@@ -2,7 +2,7 @@ from django.contrib import admin
 
 # Register your models here.
 from django.contrib import admin
-from models import MpttMeetInfo , Owner
+from models import MpttMeetInfo , Owner ,Meet
 
 
 class MpttMeetInfoAdmin(admin.ModelAdmin):
@@ -14,14 +14,14 @@ class OwnerAdmin(admin.ModelAdmin):
     fields = ('name','meetInfo' )
     list_display = ('name','meetInfo')
 
-
-class NewsCategoryAdmin(admin.ModelAdmin):
-    search_fields = ('name',)
-    list_display = ('name','create_time')
+class MeetAdmin(admin.ModelAdmin):
+    fields = ('name','meetInfo' )
+    list_display = ('name','meetInfo')
 
 
 
 admin.site.register(Owner, OwnerAdmin)
 
+admin.site.register(Meet, MeetAdmin)
 
 admin.site.register(MpttMeetInfo,MpttMeetInfoAdmin)

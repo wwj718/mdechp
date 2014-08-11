@@ -1,5 +1,7 @@
 #coding:utf-8
 from django.db import models
+from jsonfield import JSONField
+
 
 # Create your models here.
 from mptt.models import MPTTModel, TreeForeignKey
@@ -26,7 +28,7 @@ class Owner(models.Model):
     '''
     name = models.CharField(max_length=100, verbose_name='姓名')
     meetInfo = models.ForeignKey(MpttMeetInfo,blank=True, null=True, verbose_name=u'会议信息')
-    
+
     def InitMpttMeetInfo(self):
         '''赋值给meetInfo'''
         root = MpttMeetInfo.objects.create(title="会议信息")
@@ -41,4 +43,26 @@ class Owner(models.Model):
 
 #初始化会议信息树
 
+######################################################
+#test JSONField
 
+class Meet(models.Model):
+    name = models.CharField(max_length=100, verbose_name='name')
+    #meetInfo = JSONField(default={"check":0}) #must use "",'' error admin will cause error , because obj -> string , in view ok
+    meetInfo = JSONField(default="")
+    def InitMeetInfo(self):
+        '''
+        #初始化会议信息给meetInfo
+        #使用json来应对不稳定的数据结构，广告信息可以随着用户的需求随意生成树状结构
+        '''
+        info = {
+            "baseSetting":{"a1":"","a2":""},
+            "test1":"",
+            "test2":""
+            }
+
+        return info
+
+    def save(self, *args, **kwargs):
+        self.meetInfo = self.InitMeetInfo()
+        super(Meet, self).save(*args, **kwargs)

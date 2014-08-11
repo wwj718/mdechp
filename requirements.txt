@@ -30,6 +30,7 @@ django-sitetree==1.0.0
 #edit wwj
 Pillow
 django-mptt
+jsonfield
 #end wwj
 
 easy-thumbnails==2.0.1
