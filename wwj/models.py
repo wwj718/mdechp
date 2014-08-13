@@ -47,7 +47,7 @@ class Owner(models.Model):
 #test JSONField
 
 class Meet(models.Model):
-    name = models.CharField(max_length=100, verbose_name='name')
+    name = models.CharField(max_length=100, verbose_name='会议名称')
     #meetInfo = JSONField(default={"check":0}) #must use "",'' error admin will cause error , because obj -> string , in view ok
     meetInfo = JSONField(default="")
     def InitMeetInfo(self):
@@ -59,7 +59,7 @@ class Meet(models.Model):
             "baseSetting":{"a1":"","a2":""},
             "test1":"",
             "test2":""
-            }
+        }
 
         return info
 

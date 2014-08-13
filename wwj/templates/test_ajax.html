@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HTML5</title>
+    <script src="http://libs.baidu.com/jquery/1.8.2/jquery.min.js"></script>
+  </head>
+<body>
+<button id="testajax"><h1>test ajax</h1></button>
+
+<br>
+
+<h1 id="showdata">showdata</h1>
+
+<script type="text/javascript">
+$("#testajax").click(function(){
+    //403
+    $.post('/wwj/edit_meet_info/1', {username: 'wwj',password:'56'}, function(data) {
+      //alert('1')
+      $("#showdata").html(data)
+    //optional stuff to do after success
+      });
+  /* Act on the event */
+});
+
+</script>
+</body>
+</html>
